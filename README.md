@@ -32,7 +32,6 @@
         <li>CSS3</li>
         <li>JavaScript</li>
         <li>Font Awesome Icons</li>
-        <li>GitHub Pages (for deployment)</li>
     </ul>
     <h2>🪧 License :</h2>
     <p>This project is licensed under the <a href="LICENSE.md">MIT License</a>.</p>
