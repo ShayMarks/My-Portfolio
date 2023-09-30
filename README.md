@@ -39,4 +39,3 @@
     <div align="center">
 <p>Feel free to fork, modify, and use this README template for your own projects. If you have any questions or need further assistance, don't hesitate to contact me. Thank you for visiting my portfolio!</p>
   </div>
-

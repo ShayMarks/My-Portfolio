@@ -1,156 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shay mrks - Portfolio</title>
     <link rel="shortcut icon" type="image/jpg" href="Photos/icon.ico" />
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <nav>
-            <div class="container">
-
-                <h1>
-                    <div class="waviy">
-                        <span style="--i:1">S</span>
-                        <span style="--i:2">h</span>
-                        <span style="--i:3">a</span>
-                        <span style="--i:4">y</span>
-                        <span> </span>
-                        <span> </span>
-                        <span style="--i:7">m</span>
-                        <span style="--i:8">r</span>
-                        <span style="--i:9">k</span>
-                        <span style="--i:10">s</span>
-                    </div>
-                </h1>
-
-                <ul class="tool-bar">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+      <nav>
+        <div class="container">
+          <h1>
+            <div class="waviy">
+              <span style="--i: 1">S</span>
+              <span style="--i: 2">h</span>
+              <span style="--i: 3">a</span>
+              <span style="--i: 4">y</span>
+              <span> </span>
+              <span> </span>
+              <span style="--i: 7">m</span>
+              <span style="--i: 8">r</span>
+              <span style="--i: 9">k</span>
+              <span style="--i: 10">s</span>
             </div>
-        </nav>
+          </h1>
+
+          <ul class="tool-bar">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h4>Welcome to My Portfolio</h4>
-                <p>I'm a Frontend Developer passionate about creating stunning web experiences.</p>
-                <a href="#portfolio" class="btn">View Portfolio</a>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h4>Welcome to My Portfolio</h4>
+          <p>
+            I'm a Frontend Developer passionate about creating stunning web
+            experiences.
+          </p>
+          <a href="#portfolio" class="btn">View Portfolio</a>
         </div>
+      </div>
     </section>
 
     <section id="about" class="section">
-        <div class="container">
-            <h2>About Me :</h2>
-            <p>I am a Practical software Engineer student at the College of Management.</p>
-            <p>I am a creative and detail-oriented front-end developer with a focus on creating visually appealing and
-                user-friendly websites and web applications. I have a strong foundation in HTML, CSS, and JavaScript,
-                and I am constantly seeking opportunities to learn and grow in the ever-evolving world of web
-                development.</p>
-            <p>My passion for crafting exceptional user experiences drives me to design and build beautiful, responsive,
-                and accessible websites. I am committed to staying up-to-date on the latest internet technologies in
-                order to bring new ideas to each project.</p>
+      <div class="container">
+        <h2>About Me :</h2>
+        <p>
+          I am a Practical software Engineer student at the College of
+          Management.
+        </p>
+        <p>
+          I am a creative and detail-oriented front-end developer with a focus
+          on creating visually appealing and user-friendly websites and web
+          applications. I have a strong foundation in HTML, CSS, and JavaScript,
+          and I am constantly seeking opportunities to learn and grow in the
+          ever-evolving world of web development.
+        </p>
+        <p>
+          My passion for crafting exceptional user experiences drives me to
+          design and build beautiful, responsive, and accessible websites. I am
+          committed to staying up-to-date on the latest internet technologies in
+          order to bring new ideas to each project.
+        </p>
 
-            <!--  resume Button -->
-            <button id="openResumeButton" class="neonButton"><i class="fa-solid fa-file" style="color: #bc13fe;"></i>
-                Open
-                Resume <i class="fa-solid fa-file" style="color: #bc13fe;"></i></button>
+        <!--  resume Button -->
+        <button id="openResumeButton" class="neonButton">
+          <i class="fa-solid fa-file" style="color: #bc13fe"></i> Open Resume
+          <i class="fa-solid fa-file" style="color: #bc13fe"></i>
+        </button>
 
-            <!-- Hidden modal for the resume -->
-            <div id="resumeModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" id="closeResumeButton">&times;</span>
-                    <iframe id="resumeFrame" src="cv.pdf"></iframe>
-                </div>
-            </div>
-
+        <!-- Hidden modal for the resume -->
+        <div id="resumeModal" class="modal">
+          <div class="modal-content">
+            <span class="close" id="closeResumeButton">&times;</span>
+            <iframe id="resumeFrame" src="cv.pdf"></iframe>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfolio :</h2>
+      <div class="container">
+        <h2>Portfolio :</h2>
 
-            <div class=" portfolio-item">
-                <i class="fa-solid fa-gamepad fa-2xl" style="color: #bb13fe;"></i>
-                <h3>Gaming store</h3>
-                <p>This project is an online store I built as part of my Practical Engineering studies to
-                    demonstrate
-                    skills in HTML, CSS and JavaScript by creating a visually appealing and interactive user
-                    interface.
-                </p>
+        <div class="portfolio-item">
+          <i class="fa-solid fa-gamepad fa-2xl" style="color: #bb13fe"></i>
+          <h3>Gaming store</h3>
+          <p>
+            This project is an online store I built as part of my Practical
+            Engineering studies to demonstrate skills in HTML, CSS and
+            JavaScript by creating a visually appealing and interactive user
+            interface.
+          </p>
 
-                <p>The store, called "Shay Gaming Store," has a homepage that serves as a gateway to different
-                    sections
-                    like the store, registration, and contact pages. HTML defines the layout and structure, CSS
-                    handles
-                    design elements, and JavaScript adds dynamic effects and interactivity.</p>
-                <a href="https://github.com/ShayMrks/GamingStore" target="_blank" class="btn">View Project</a>
-            </div>
-            <div class="portfolio-item">
-                <i class="fa-solid fa-wheat-awn fa-2xl" style="color: #bb13fe;"></i>
-                <h3>hay day list Generator</h3>
-                <p>The Item List Generator is a web application designed to help HAY DAY users and players create and
-                    manage item lists with pricing details. Whether you're planning in-game purchases, tracking
-                    inventory, or simply organizing a list of items, this tool can streamline the process. It allows
-                    users to customize the quantity of items, their selling price, and filter items by required level.
-                </p>
-
-                <p> Whether you are planning in-game purchases in HAY DAY, tracking inventory, or simply organizing a
-                    list of items, this tool can simplify the process. It enables users to customize the quantity of
-                    items, their sale price, and filter items by required level.</p>
-                <a href="https://github.com/ShayMrks/HayDayListGenerator" target="_blank" class="btn">View Project</a>
-            </div>
-            <!-- more projects comming soon -->
-
-            <div class="portfolio-item">
-                <i class="fa-brands fa-github-alt fa-2xl" style="color: #bb13fe;"></i>
-                <h3>Visit my github page for more</h3>
-                <a href="https://github.com/ShayMrks/" target="_blank" class="btn">github</a>
-            </div>
+          <p>
+            The store, called "Shay Gaming Store," has a homepage that serves as
+            a gateway to different sections like the store, registration, and
+            contact pages. HTML defines the layout and structure, CSS handles
+            design elements, and JavaScript adds dynamic effects and
+            interactivity.
+          </p>
+          <a
+            href="https://github.com/ShayMrks/GamingStore"
+            target="_blank"
+            class="btn"
+            >View Project</a
+          >
         </div>
+        <div class="portfolio-item">
+          <i class="fa-solid fa-wheat-awn fa-2xl" style="color: #bb13fe"></i>
+          <h3>hay day list Generator</h3>
+          <p>
+            The Item List Generator is a web application designed to help HAY
+            DAY users and players create and manage item lists with pricing
+            details. Whether you're planning in-game purchases, tracking
+            inventory, or simply organizing a list of items, this tool can
+            streamline the process. It allows users to customize the quantity of
+            items, their selling price, and filter items by required level.
+          </p>
+
+          <p>
+            Whether you are planning in-game purchases in HAY DAY, tracking
+            inventory, or simply organizing a list of items, this tool can
+            simplify the process. It enables users to customize the quantity of
+            items, their sale price, and filter items by required level.
+          </p>
+          <a
+            href="https://github.com/ShayMrks/HayDayListGenerator"
+            target="_blank"
+            class="btn"
+            >View Project</a
+          >
+        </div>
+        <!-- more projects comming soon -->
+
+        <div class="portfolio-item">
+          <i class="fa-brands fa-github-alt fa-2xl" style="color: #bb13fe"></i>
+          <h3>Visit my github page for more</h3>
+          <a href="https://github.com/ShayMrks/" target="_blank" class="btn"
+            >github</a
+          >
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me :</h2>
-            <p>If you'd like to get in touch, feel free to email me at <a
-                    href="mailto:nrexhd@gmail.com">nrexhd@gmail.com</a> or use the following social networks below:</p>
-        </div>
+      <div class="container">
+        <h2>Contact Me :</h2>
+        <p>
+          If you'd like to get in touch, feel free to email me at
+          <a href="mailto:nrexhd@gmail.com">nrexhd@gmail.com</a> or use the
+          following social networks below:
+        </p>
+      </div>
 
-        <div class="socialButtons">
-            <a href="https://www.instagram.com/shaymrks/" target="_blank" class="socialButton"><i
-                    class="fa-brands fa-instagram fa-2xl" style="color: #a934b2;"></i></a>
-            <a href="https://www.linkedin.com/in/shay-mrks-920546260/" target="_blank" class="socialButton"><i
-                    class="fa-brands fa-linkedin fa-2xl" style="color: #3874dc;"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100000534363504" target="_blank" class="socialButton"><i
-                    class="fa-brands fa-facebook fa-2xl" style="color: #174dab;"></i></a>
+      <div class="socialButtons">
+        <a
+          href="https://www.instagram.com/shaymrks/"
+          target="_blank"
+          class="socialButton"
+          ><i class="fa-brands fa-instagram fa-2xl" style="color: #a934b2"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/shay-mrks-920546260/"
+          target="_blank"
+          class="socialButton"
+          ><i class="fa-brands fa-linkedin fa-2xl" style="color: #3874dc"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100000534363504"
+          target="_blank"
+          class="socialButton"
+          ><i class="fa-brands fa-facebook fa-2xl" style="color: #174dab"></i
+        ></a>
 
-            <a href="https://github.com/ShayMrks" target="_blank" class="socialButton"><i
-                    class="fa-brands fa-github fa-2xl" style="color: #e6e6e6;"></i></a>
-        </div>
+        <a
+          href="https://github.com/ShayMrks"
+          target="_blank"
+          class="socialButton"
+          ><i class="fa-brands fa-github fa-2xl" style="color: #e6e6e6"></i
+        ></a>
+      </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Shay Mrks</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2023 Shay Mrks</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

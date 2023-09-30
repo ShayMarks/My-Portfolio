@@ -6,325 +6,298 @@ p,
 ul,
 li,
 form {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1e1c1f;
-    color: #fff;
-    line-height: 1.6;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1c1f;
+  color: #fff;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .hero-content {
-    background: repeating-linear-gradient(45deg,
-            #606cbc60,
-            #606dbc60 5%,
-            #46529860 5%,
-            #46529860 10%);
-    background-size: 100px 100px;
-    padding: 20px;
-    border: 10px solid #bb13fe28;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    transition: 1s;
-
+  background: repeating-linear-gradient(
+    45deg,
+    #606cbc60,
+    #606dbc60 5%,
+    #46529860 5%,
+    #46529860 10%
+  );
+  background-size: 100px 100px;
+  padding: 20px;
+  border: 10px solid #bb13fe28;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: 1s;
 }
 
 @keyframes move-it {
-    0% {
-        background-position: initial;
-    }
+  0% {
+    background-position: initial;
+  }
 
-    100% {
-        background-position: 100px 0px;
-    }
+  100% {
+    background-position: 100px 0px;
+  }
 }
 
 .hero-content:hover {
-    background: repeating-linear-gradient(45deg,
-            #606cbc60,
-            #606dbc8c 5%,
-            #4652988c 5%,
-            #4652988c 10%);
-    background-size: 100px 100px;
-    animation: move-it 2s linear infinite;
-    transform: translateY(-5px);
+  background: repeating-linear-gradient(
+    45deg,
+    #606cbc60,
+    #606dbc8c 5%,
+    #4652988c 5%,
+    #4652988c 10%
+  );
+  background-size: 100px 100px;
+  animation: move-it 2s linear infinite;
+  transform: translateY(-5px);
 }
 
-
-
-
 header {
-    background-color: #1e1c1f;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #1e1c1f;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .tool-bar {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
 }
 
 .tool-bar li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
-
 .tool-bar a:hover {
-    text-decoration: none;
-    transition: 1s;
+  text-decoration: none;
+  transition: 1s;
 }
 
 .tool-bar a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #fff;
 }
 
 .tool-bar a:hover {
-    color: #bc13fe;
-    text-shadow:
-        0 0 7px #bc13fe,
-        0 0 10px #bc13fe,
-        0 0 21px #bc13fe,
-        0 0 42px #fff,
-        0 0 82px #fff,
-        0 0 92px #fff,
-        0 0 102px #fff,
-        0 0 151px #fff;
-
-
+  color: #bc13fe;
+  text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
+    0 0 42px #fff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff;
 }
 
 section {
-    padding: 40px 0;
-    text-align: center;
-
+  padding: 40px 0;
+  text-align: center;
 }
 
 h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 42px #bc13fe,
-        0 0 82px #bc13fe
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 42px #bc13fe, 0 0 82px #bc13fe;
 }
 
 .waviy {
-    position: relative;
+  position: relative;
 }
 
 .waviy span {
-    position: relative;
-    display: inline-block;
-    font-size: 40px;
-    color: #bc13fe;
-    text-transform: uppercase;
-    animation: flip 3.9s infinite;
-    animation-delay: calc(.3s * var(--i))
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #bc13fe;
+  text-transform: uppercase;
+  animation: flip 3.9s infinite;
+  animation-delay: calc(0.3s * var(--i));
 }
 
 @keyframes flip {
-
-    0%,
-    80% {
-        transform: rotateY(360deg)
-    }
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
 }
 
-
 h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #e9b1ff;
-
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e9b1ff;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #bc13fe;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #bc13fe;
 }
 
 h4 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #bc13fe;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #bc13fe;
 }
 
 .neonButton {
-    font-family: Courier, monospace;
-    margin-top: 50px;
-    color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #bc13fe,
-        0 0 82px #bc13fe,
-        0 0 92px #bc13fe,
-        0 0 102px #bc13fe,
-        0 0 151px #bc13fe;
-    font-size: 1.6rem;
-    background-color: transparent;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border: 0.2rem solid #fff;
-    border-radius: 2rem;
-    padding: 0.4em;
-    box-shadow: 0 0 .2rem #fff,
-        0 0 .2rem #fff,
-        0 0 2rem #bc13fe,
-        0 0 0.8rem;
-    transition: 0.3s;
+  font-family: Courier, monospace;
+  margin-top: 50px;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe,
+    0 0 82px #bc13fe, 0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem;
+  transition: 0.3s;
 }
 
 .neonButton:hover {
-    color: #bc13fe;
-    text-shadow:
-        0 0 7px #bc13fe,
-        0 0 10px #bc13fe,
-        0 0 21px #bc13fe,
-        0 0 42px #fff,
-        0 0 82px #fff,
-        0 0 92px #fff,
-        0 0 102px #fff,
-        0 0 151px #fff;
-    border-color: #fff;
+  color: #bc13fe;
+  text-shadow: 0 0 7px #bc13fe, 0 0 10px #bc13fe, 0 0 21px #bc13fe,
+    0 0 42px #fff, 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff;
+  border-color: #fff;
 }
 
-
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    margin: 25px;
-    background-color: #bb13fe4b;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin: 25px;
+  background-color: #bb13fe4b;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .portfolio-item {
-    border: 2px solid #bb13fe63;
-    margin: 20px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #bb13fe63;
-    transition: 0.5s;
+  border: 2px solid #bb13fe63;
+  margin: 20px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #bb13fe63;
+  transition: 0.5s;
 }
 
 .portfolio-item:hover {
-    border: 2px solid #bb13fefb;
-    background-color: #2e2a30;
-    box-shadow: 0 0 20px #bb13fe;
-    transform: translateY(-5px);
+  border: 2px solid #bb13fefb;
+  background-color: #2e2a30;
+  box-shadow: 0 0 20px #bb13fe;
+  transform: translateY(-5px);
 }
 
-
-
 footer {
-    background-color: #1e1c1f;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+  background-color: #1e1c1f;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .socialButtons {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .socialButton {
-    font-size: 2rem;
-    color: #fff;
-    text-shadow:
-        0px 0px 3px rgba(255, 255, 255, 0.6),
-        0px 0px 3px #bb13fe36;
-    transition: transform 0.3s, font-size 0.3s, box-shadow 0.3s;
-    margin: 20px;
-    display: inline-block;
-    cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.6), 0px 0px 3px #bb13fe36;
+  transition: transform 0.3s, font-size 0.3s, box-shadow 0.3s;
+  margin: 20px;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .socialButton:hover {
-    transform: scale(1.1);
-    font-size: 2.2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-shadow:
-        0px 0px 8px rgba(255, 255, 255, 0.8),
-        0px 0px 5px #bb13fe;
+  transform: scale(1.1);
+  font-size: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8), 0px 0px 5px #bb13fe;
 }
-
-
 
 .btn:hover {
-    background-color: #bb13fe;
-    transform: scale(1.1);
-    transition: background-color 0.3s, transform 0.3s;
+  background-color: #bb13fe;
+  transform: scale(1.1);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #resumeFrame {
-    width: 800px;
-    height: 900px;
-}
-
-/* Add a media query for mobile screens */
-@media (max-width: 768px) {
-    #resumeFrame {
-        width: 400px;
-        height: 450px;
-    }
+  width: 700px;
+  height: 800px;
 }
 
 .close {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    font-size: 35x;
-    cursor: pointer;
-    color: red;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 35x;
+  cursor: pointer;
+  color: red;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em blue, 0 0 0.2em blue;
+}
+@media (max-width: 768px) {
+  #resumeFrame {
+    width: 400px;
+    height: 450px;
+  }
+
+  .socialButtons {
+    margin-top: 10px;
+  }
+
+  .socialButton {
+    font-size: 1.6rem;
+  }
+
+  .socialButton:hover {
+    transform: scale(1.1);
+    font-size: 1.8rem;
+  }
+
+  .waviy span {
+    font-size: 30px;
+  }
+
+  .tool-bar a {
+    font-size: 1.3rem;
+  }
 }
