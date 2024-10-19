@@ -1,291 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shay mrks - Portfolio</title>
-    <link rel="shortcut icon" type="image/jpg" href="Photos/icon.ico" />
+    <title>Shay Marks - Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="Photos/icon.ico" />
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cairo:wght@400;700&display=swap"
+        rel="stylesheet"
     />
-  </head>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <h1>
-            <div class="waviy">
-              <span style="--i: 1">S</span>
-              <span style="--i: 2">h</span>
-              <span style="--i: 3">a</span>
-              <span style="--i: 4">y</span>
-              <span> </span>
-              <span> </span>
-              <span style="--i: 7">m</span>
-              <span style="--i: 8">a</span>
-              <span style="--i: 9">r</span>
-              <span style="--i: 10">k</span>
-              <span style="--i: 11">s</span>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- JavaScript Libraries -->
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Typed.js for Typing Effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Particles.js for Background Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header id="header">
+        <nav class="navbar">
+            <div class="container">
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-          </h1>
-
-          <ul class="tool-bar">
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+        </nav>
     </header>
 
-    <section id="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h4>Welcome to My Portfolio</h4>
-          <p>
-            I'm a Frontend Developer passionate about creating stunning web
-            experiences.
-          </p>
-          <a href="#portfolio" class="btn">View Portfolio</a>
-        </div>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="hero-container">
+                <!-- Interactive Background -->
+                <canvas id="hero-canvas"></canvas>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hello, I'm <span class="highlight">Shay Marks</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        <span class="typed-text"></span>
+                    </p>
+                    <a href="#portfolio" class="btn btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me :</h2>
-        <p>
-          I am a Practical software Engineer student at the College of
-          Management.
-        </p>
-        <p>
-          I am a creative and detail-oriented front-end developer with a focus
-          on creating visually appealing and user-friendly websites and web
-          applications. I have a strong foundation in HTML, CSS, and JavaScript,
-          and I am constantly seeking opportunities to learn and grow in the
-          ever-evolving world of web development.
-        </p>
-        <p>
-          My passion for crafting exceptional user experiences drives me to
-          design and build beautiful, responsive, and accessible websites. I am
-          committed to staying up-to-date on the latest internet technologies in
-          order to bring new ideas to each project.
-        </p>
-
-        <!--  resume Button -->
-        <button id="openResumeButton" class="neonButton">
-          <i class="fa-solid fa-file" style="color: #bc13fe"></i> Open Resume
-          <i class="fa-solid fa-file" style="color: #bc13fe"></i>
-        </button>
-
-        <!-- Hidden modal for the resume -->
-        <div id="resumeModal" class="modal">
-          <div class="modal-content">
-            <span class="close" id="closeResumeButton">&times;</span>
-            <iframe id="resumeFrame" src="cv.pdf"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section">
-      <div class="container">
-        <h2>Portfolio :</h2>
-
-        <div class="portfolio-item">
-          <i class="fa-solid fa-a fa-2xl" style="color: #bb13fe"></i>
-          <i class="fa-solid fa-p fa-2xl" style="color: #bb13fe"></i>
-          <i class="fa-solid fa-i fa-2xl" style="color: #bb13fe"></i>
-          <h3>Benefits Club</h3>
-          <p>
-            an e-commerce platform using Node.js with a MongoDB database,
-            focusing on core features like user authentication, product
-            listings, and category management. The site is built with Handlebars
-            to render views dynamically, enhancing the user interface and
-            interaction. My approach was to integrate complex server-side
-            functionalities while ensuring the frontend remained responsive and
-            user-friendly, providing a comprehensive demonstration of my
-            full-stack development skills.
-          </p>
-          <a
-            href="https://github.com/ShayMarks/Shay-Benefits-Club"
-            target="_blank"
-            class="btn"
-            >View Project</a
-          >
+        <!-- About Me -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+        <div class="about-image">
+            <img src="Photos/profile.jpg" alt="Shay Marks" />
+            <div id="particles-js"></div>
         </div>
 
-        <div class="portfolio-item">
-          <i class="fa-solid fa-a fa-2xl" style="color: #bb13fe"></i>
-          <i class="fa-solid fa-i fa-2xl" style="color: #bb13fe"></i>
-          <h3>AI Portfolio Website</h3>
-          <p>
-            I share my AI projects and tutorials for creating each one. It's a
-            combination of my AI work, from GPTs to AI-generated art, and
-            interactive videos and podcasts, reflecting my journey and passion
-            in software engineering and artificial intelligence.
-          </p>
-          <a
-            href="https://github.com/ShayMarks/My-AI-Portfolio"
-            target="_blank"
-            class="btn"
-            >View Project</a
-          ><br />
-          <a
-            href="https://shaymarks.github.io/My-AI-Portfolio/"
-            target="_blank"
-            class="btn2"
-            >Visit the site</a
-          >
-        </div>
+                    
+                    <div class="about-text">
+                        <p>
+                            Hey! I'm <span class="highlight-text">Shay Marks</span>. I'm a third-year student studying software engineering at the College of Management. I enjoy delving into experiences and discovering ideas, researching new technologies, artificial intelligence tools, creating new things, delving into <span class="highlight-text">Full-Stack development</span>, with an emphasis on <span class="highlight-text">Front-End development</span>. I find enjoyment in the process, observing the results, and creating user-friendly designs that stimulate interaction.
+                        </p>
+                        <p>
+                            Since I was a child, I loved to explore and discover new things on the computer. From new technologies to questions, I asked myself how everything works in the software, websites, games I came across, and that's where I started researching to find the answers to the questions.
+                        </p>
+                        <p>
+                            I enjoy delving into programming languages and tools on my own and like to learn independently. I believe that when there is passion, it will be easy to persist in independent learning while enjoying the journey. On this site, I showcase my work portfolio projects that I created in order to solve problems, have fun, and learn. During the creation of each project, I improved my skills, faced challenges, bugs, and difficulties, and learned new things.
+                        </p>
+                        <p>
+                            Apart from coding, I am an avid music lover and also create my own music and use <span class="highlight-text">AI tools</span> to produce tracks that I share on my YouTube channel. In addition, I enjoy playing chess, like to swim, and play online games.
+                        </p>
+                        <p>
+                            I believe that hard work and perseverance can help achieve any goal, so I'm always looking for new ways to improve and grow. This site is my personal portfolio, showing my journey and the projects I've worked on.
+                        </p>
+                        <p>
+                            If you are looking for a developer with passion, dedicated and creative - I am here to help. You are welcome to browse my projects and contact me!
+                        </p>
+                        <!-- Technical Skills -->
+                        <h3>Technical Skills</h3>
+                        <!-- Skills Categories -->
+                        <div class="skills-categories">
+                            <button class="skills-filter active" data-category="all">All</button>
+                            <button class="skills-filter" data-category="languages">Programming Languages</button>
+                            <button class="skills-filter" data-category="frontend">Frontend Development</button>
+                            <button class="skills-filter" data-category="backend">Backend Development</button>
+                            <button class="skills-filter" data-category="databases">Databases</button>
+                            <button class="skills-filter" data-category="ides">IDEs & Editors</button>
+                            <button class="skills-filter" data-category="versioncontrol">Version Control</button>
+                            <button class="skills-filter" data-category="testing">Testing & Automation</button>
+                            <button class="skills-filter" data-category="tools">Tools</button>
+                            <button class="skills-filter" data-category="ai">AI</button>
+                            <button class="skills-filter" data-category="gamedev">Game Development</button>
+                        </div>
+                        <!-- Skills Icons -->
+                        <div class="skills-icons">
+                            <!-- Programming Languages -->
+                            <div class="skill-item" data-category="languages">
+                                <img src="Icons/javascript.png" alt="JavaScript" />
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="skill-item" data-category="languages">
+                                <img src="Icons/csharp.png" alt="C#" />
+                                <p>C#</p>
+                            </div>
+                            <div class="skill-item" data-category="languages">
+                                <img src="Icons/python.png" alt="Python" />
+                                <p>Python</p>
+                            </div>
 
-        <div class="portfolio-item">
-          <i class="fa-solid fa-gamepad fa-2xl" style="color: #bb13fe"></i>
-          <h3>Gaming store</h3>
-          <p>
-            This project is an online store I built as part of my Practical
-            Engineering studies to demonstrate skills in HTML, CSS and
-            JavaScript by creating a visually appealing and interactive user
-            interface.
-          </p>
+                            <!-- Frontend Development -->
+                            <div class="skill-item" data-category="frontend">
+                                <img src="Icons/html5.png" alt="HTML5" />
+                                <p>HTML5</p>
+                            </div>
+                            <div class="skill-item" data-category="frontend">
+                                <img src="Icons/handlebars.png" alt="Handlebars" />
+                                <p>Handlebars</p>
+                            </div>
+                            <div class="skill-item" data-category="frontend">
+                                <img src="Icons/css3.png" alt="CSS3" />
+                                <p>CSS3</p>
+                            </div>
+                            <div class="skill-item" data-category="frontend">
+                                <img src="Icons/bootstrap.png" alt="Bootstrap" />
+                                <p>Bootstrap</p>
+                            </div>
 
-          <p>
-            The store, called "Shay Gaming Store," has a homepage that serves as
-            a gateway to different sections like the store, registration, and
-            contact pages. HTML defines the layout and structure, CSS handles
-            design elements, and JavaScript adds dynamic effects and
-            interactivity.
-          </p>
-          <a
-            href="https://github.com/ShayMarks/GamingStore"
-            target="_blank"
-            class="btn"
-            >View Project</a
-          >
-        </div>
-        <div class="portfolio-item">
-          <i class="fa-solid fa-wheat-awn fa-2xl" style="color: #bb13fe"></i>
-          <h3>hay day list Generator</h3>
-          <p>
-            The Item List Generator is a web application designed to help HAY
-            DAY users and players create and manage item lists with pricing
-            details. Whether you're planning in-game purchases, tracking
-            inventory, or simply organizing a list of items, this tool can
-            streamline the process. It allows users to customize the quantity of
-            items, their selling price, and filter items by required level.
-          </p>
+                            <!-- Backend Development -->
+                            <div class="skill-item" data-category="backend">
+                                <img src="Icons/nodejs.png" alt="Node.js" />
+                                <p>Node.js</p>
+                            </div>
+                            <div class="skill-item" data-category="backend">
+                                <img src="Icons/aspnet.png" alt="ASP.NET" />
+                                <p>ASP.NET</p>
+                            </div>
+                 
 
-          <p>
-            Whether you are planning in-game purchases in HAY DAY, tracking
-            inventory, or simply organizing a list of items, this tool can
-            simplify the process. It enables users to customize the quantity of
-            items, their sale price, and filter items by required level.
-          </p>
-          <a
-            href="https://github.com/ShayMarks/HayDayListGenerator"
-            target="_blank"
-            class="btn"
-            >View Project</a
-          ><br />
-          <a
-            href="https://shaymarks.github.io/HayDayListGenerator/"
-            target="_blank"
-            class="btn2"
-            >Visit the site</a
-          >
-        </div>
+                            <!-- Databases -->
+                            <div class="skill-item" data-category="databases">
+                                <img src="Icons/sqlserver.png" alt="SQL Server" />
+                                <p>SQL Server</p>
+                            </div>
+                            <div class="skill-item" data-category="databases">
+                                <img src="Icons/mysql.png" alt="MySQL" />
+                                <p>MySQL</p>
+                            </div>
+                            <div class="skill-item" data-category="databases">
+                                <img src="Icons/mongodb.png" alt="MongoDB" />
+                                <p>MongoDB</p>
+                            </div>
+                            <div class="skill-item" data-category="databases">
+                                <img src="Icons/mongosh.png" alt="Mongosh" />
+                                <p>Mongosh</p>
+                            </div>
 
-        <div class="portfolio-item">
-          <i class="fa-solid fa-message fa-2xl" style="color: #bb13fe"></i>
-          <h3>WhatsApp-Message-Sender</h3>
-          <p>
-            WhatsApp Message Sender allows users to send messages without the
-            need to save the recipient's phone number in their contacts. This
-            means you can instantly compose and send messages to anyone, even if
-            their contact information isn't stored on your device.
-          </p>
+                            <!-- IDEs & Editors -->
+                            <div class="skill-item" data-category="ides">
+                                <img src="Icons/visualstudio.png" alt="Visual Studio" />
+                                <p>Visual Studio</p>
+                            </div>
+                            <div class="skill-item" data-category="ides">
+                                <img src="Icons/vscode.png" alt="VS Code" />
+                                <p>VS Code</p>
+                            </div>
 
-          <p>
-            Additionally, the app enables businesses to create a clickable link
-            that connects customers directly to their WhatsApp messaging
-            service. This convenient feature streamlines customer communication
-            and provides an efficient way for customers to get in touch with
-            just a single click.
-          </p>
-          <a
-            href="https://github.com/ShayMarks/WhatsApp-Message-Sender"
-            target="_blank"
-            class="btn"
-            >View Project</a
-          ><br />
-          <a
-            href="https://shaymarks.github.io/WhatsApp-Message-Sender/"
-            target="_blank"
-            class="btn2"
-            >Visit the site</a
-          >
-        </div>
-        <!-- more projects comming soon -->
+                            <!-- Version Control -->
+                            <div class="skill-item" data-category="versioncontrol">
+                                <img src="Icons/git.png" alt="Git" />
+                                <p>Git</p>
+                            </div>
+                            <div class="skill-item" data-category="versioncontrol">
+                                <img src="Icons/github.png" alt="GitHub" />
+                                <p>GitHub</p>
+                            </div>
+                            <div class="skill-item" data-category="versioncontrol">
+                                <img src="Icons/gitbash.png" alt="Git Bash" />
+                                <p>Git Bash</p>
+                            </div>
 
-        <div class="portfolio-item">
-          <i class="fa-brands fa-github-alt fa-2xl" style="color: #bb13fe"></i>
-          <h3>Visit my github page for more</h3>
-          <a href="https://github.com/ShayMarks/" target="_blank" class="btn"
-            >github</a
-          >
-        </div>
-      </div>
-    </section>
+                            <!-- Testing & Automation -->
+                            <div class="skill-item" data-category="testing">
+                                <img src="Icons/selenium.png" alt="Selenium" />
+                                <p>Selenium</p>
+                            </div>
+                            <div class="skill-item" data-category="testing">
+                                <img src="Icons/postman.png" alt="Postman" />
+                                <p>Postman</p>
+                            </div>
+                            <div class="skill-item" data-category="testing">
+                                <img src="Icons/stp.png" alt="STP" />
+                                <p>STP</p>
+                            </div>
+                            <div class="skill-item" data-category="testing">
+                                <img src="Icons/std.png" alt="STD" />
+                                <p>STD</p>
+                            </div>
+                            <div class="skill-item" data-category="testing">
+                                <img src="Icons/str.png" alt="STR" />
+                                <p>STR</p>
+                            </div>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact Me :</h2>
-        <p>
-          If you'd like to get in touch, feel free to email me at
-          <a href="mailto:nrexhd@gmail.com">nrexhd@gmail.com</a> or use the
-          following social networks below:
-        </p>
-      </div>
+                            <!-- Tools -->
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/msoffice.png" alt="Microsoft Office" />
+                                <p>Microsoft Office</p>
+                            </div>
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/photoshop.png" alt="Photoshop" />
+                                <p>Photoshop</p>
+                            </div>
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/premierepro.png" alt="Premiere Pro" />
+                                <p>Premiere Pro</p>
+                            </div>
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/illustrator.png" alt="Illustrator" />
+                                <p>Illustrator</p>
+                            </div>
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/lightroom.png" alt="Lightroom" />
+                                <p>Lightroom</p>
+                            </div>
+                            <div class="skill-item" data-category="tools">
+                                <img src="Icons/audition.png" alt="Audition" />
+                                <p>Audition</p>
+                            </div>
 
-      <div class="socialButtons">
-        <a
-          href="https://www.instagram.com/shaymarks2/"
-          target="_blank"
-          class="socialButton"
-          ><i class="fa-brands fa-instagram fa-xl" style="color: #f7e2ff"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/shay-marks-920546260/"
-          target="_blank"
-          class="socialButton"
-          ><i class="fa-brands fa-linkedin fa-xl" style="color: #f7e2ff"></i
-        ></a>
-        <a
-          href="https://www.facebook.com/profile.php?id=100000534363504"
-          target="_blank"
-          class="socialButton"
-          ><i class="fa-brands fa-facebook fa-xl" style="color: #f7e2ff"></i
-        ></a>
+                            <!-- AI -->
+                            
+                            <div class="skill-item" data-category="ai">
+                                <img src="Icons/chatgpt.png" alt="ChatGPT" />
+                                <p>ChatGPT</p>
+                            </div>
 
-        <a
-          href="https://github.com/ShayMrks"
-          target="_blank"
-          class="socialButton"
-          ><i class="fa-brands fa-github fa-xl" style="color: #f7e2ff"></i
-        ></a>
-      </div>
-    </section>
+                            <div class="skill-item" data-category="ai">
+                                <img src="Icons/ai.png" alt="ChatGPT" />
+                                <p>Alot AI tools</p>
+                            </div>
 
+                            <!-- Game Development -->
+                            <div class="skill-item" data-category="gamedev">
+                                <img src="Icons/unity.png" alt="Unity" />
+                                <p>Unity</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Resume Button -->
+                        <button id="openResumeButton" class="btn btn-secondary" aria-label="View Resume">
+                            <i class="fas fa-file-alt"></i> View Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline">
+            <div class="container">
+                <h2 class="section-title">My Journey</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2024</h3>
+                            <p>I finished a course: Complete C# Unity Game Developer 2D. (by gamedev.tv)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>I started working for a large technology company in Israel, NESS Technologies</p>
+                        </div>
+                    </div>
+                    <!-- Additional Timeline Items -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>I finished my first course on Udemy: The Complete JavaScript Course 2023: From Zero to Expert! (by Jonas Schmedtmann)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <p>I started studying at the College of Management, studies for the Practical Software Engineering certificate, studies that are 3 years long</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="portfolio">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <!-- Filters -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Websites</button>
+                    <button class="filter-btn" data-filter="app">Applications</button>
+                    <button class="filter-btn" data-filter="ai">AI Projects</button>
+                </div>
+                <!-- Projects Gallery -->
+                <div class="portfolio-gallery">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/1.jpg" alt="Benefits Club Project" />
+                            <div class="portfolio-overlay">
+                                <h3>Benefits Club</h3>
+                                <p>A platform that provides exclusive benefits and discounts to members.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/Shay-Benefits-Club"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/2.jpg" alt="Hotel Management System" />
+                            <div class="portfolio-overlay">
+                                <h3>Hotel Management System</h3>
+                                <p>A comprehensive hotel management system designed to streamline hotel.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/My-AI-Portfolio"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="portfolio-item" data-category="ai">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/3.jpg" alt="AI Portfolio Website" />
+                            <div class="portfolio-overlay">
+                                <h3>AI Portfolio Website</h3>
+                                <p>Projects and explanations of things I did with the help of AI.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/My-AI-Portfolio"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                                <a
+                                    href="https://shaymarks.github.io/My-AI-Portfolio/"
+                                    target="_blank"
+                                    class="btn btn-secondary"
+                                >Visit website</a>            
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/4.jpg" alt="Gaming Store Project" />
+                            <div class="portfolio-overlay">
+                                <h3>Gaming Store</h3>
+                                <p>An online store offering the latest video games and accessories.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/Gaming-Store"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/5.jpg" alt="WhatsApp Message Sender" />
+                            <div class="portfolio-overlay">
+                                <h3>WhatsApp Message Sender</h3>
+                                <p>Send WhatsApp messages without saving a contact.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/WhatsApp-Message-Sender"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                                <a
+                                    href="https://shaymarks.github.io/WhatsApp-Message-Sender/"
+                                    target="_blank"
+                                    class="btn btn-secondary"
+                                >Visit website</a>      
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6-->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/6.jpg" alt="walla! News scrape" />
+                            <div class="portfolio-overlay">
+                                <h3>walla! News scraper</h3>
+                                <p>Python script for scraping Walla! News, with Selenium, saving data to CSV and Excel.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/walla_scraper"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                >View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/7.jpg" alt="HayDay List Generator" />
+                            <div class="portfolio-overlay">
+                                <h3>HayDay List Generator</h3>
+                                <p>Managing item lists with pricing, quantity customization, filtering, and total price calculation.</p>
+                                <a
+                                    href="https://github.com/ShayMarks/HayDayListGenerator"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >View Project</a>
+                                <a
+                                    href="https://shaymarks.github.io/HayDayListGenerator/"
+                                    target="_blank"
+                                    class="btn btn-secondary"
+                                   >Visit website</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 8 -->
+                    <div class="portfolio-item" data-category="ai">
+                        <div class="portfolio-image">
+                            <img src="Photos/Projects/8.jpg" alt="Group Expense Calculator" />
+                            <div class="portfolio-overlay">
+                                <h3>Group Expense Calculator</h3>
+                                <p>The group expense splitter calculator, built with AI (no code).</p>
+                                <a
+                                    href="https://github.com/ShayMarks/Group-Expense-Calculator"
+                                    target="_blank"
+                                    class="btn btn-primary"
+                                    >View Project</a>
+                                <a
+                                    href="https://shaymarks.github.io/Group-Expense-Calculator/"
+                                    target="_blank"
+                                    class="btn btn-secondary"
+                                    >Visit website</a> 
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- GitHub -->
+                <div class="portfolio-item" >
+                    <div class="portfolio-image">
+                        <img src="Photos/Projects/github.jpg" alt="github" />
+                        <div class="portfolio-overlay">
+                            <h3>More Projects</h3>
+                            <p>Coming Soon...</p>
+                            <a
+                                href="https://github.com/ShayMarks"
+                                target="_blank"
+                                class="btn btn-secondary"
+                            >Visit My GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- More Projects... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Details</h3>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:nrexhd@gmail.com">nrexhd@gmail.com</a>
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/shay-marks-920546260/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/ShayMarks" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>&copy; 2023 Shay Marks</p>
-      </div>
+        <div class="container">
+            <p>&copy; 2024 Shay Marks. All rights reserved.</p>
+        </div>
     </footer>
 
+<!-- Resume Modal -->
+<div id="resumeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" data-close="resumeModal">&times;</span>
+        <iframe src="cv.pdf" frameborder="0" title="Shay Marks Resume"></iframe>
+    </div>
+</div>
+
+    <!-- JavaScript Files -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
